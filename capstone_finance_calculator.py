@@ -2,15 +2,18 @@ import math
 
 # Display welcome message and calculator options.
 
-print("Welcome to the Hyperion Finance Calculator.\n")
-
-print("We offer the following two calculation options:\n")
-
 print(
-    "Investment - to calculate the amount of interest you'll earn on your investment.\n"
-    )
+    """
+***** Welcome to the GitHub Finance Calculator. *****
 
-print("Bond - to calculate the amount you'll have to pay on a home loan.\n")
+We offer the following two calculation options:
+------------------------------------
+Investment - to calculate the amount of interest you'll earn on your investment.
+------------------------------------
+Bond - to calculate the amount you'll have to pay on a home loan.
+------------------------------------
+"""
+)
 
 # Ask user to choose between the 2 options within a while-loop so that an invalid
 # command runs another iteration of the while-loop.
@@ -124,7 +127,7 @@ if user_choice == "investment":
     
     # f-string in conjunction with {variable:.2f} to return a value rounded to 
     # 2 decimal places.
-    print(f"\nYou should expect a return of £{expected_return:.2f}")
+    print(f"\nYou should expect a return of £{expected_return:,.2f}")
 
 elif user_choice == "bond":
     
@@ -191,6 +194,6 @@ elif user_choice == "bond":
         / (1 - (1 + interest_rate) ** (-bond_duration))
         )
 
-    print(f"\nYou should expect to pay back £{repayment_amount:.2f} per month.")
+    print(f"\nYou should expect to pay back £{repayment_amount:,.2f} per month.")
     
-print("\nThank you for using the Hyperion Finance Calculator.")
+print("\nThank you for using the GitHub Finance Calculator.")
